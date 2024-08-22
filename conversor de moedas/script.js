@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultado = document.getElementById('resultado');
     const converterBtn = document.getElementById('converter-btn');
 
-    // Fetch currencies and populate dropdowns
+   
     fetch(API_URL + 'USD')
         .then(response => response.json())
         .then(data => {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             moedaDestino.value = 'BRL';
         });
 
-    // Perform conversion
+
     converterBtn.addEventListener('click', () => {
         const valor = parseFloat(valorInput.value);
         const fromCurrency = moedaOrigem.value;
